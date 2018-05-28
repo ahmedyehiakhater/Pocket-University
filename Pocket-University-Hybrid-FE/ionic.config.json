@@ -1,0 +1,8 @@
+{
+  "name": "Pocket-University-Hybrid-FE",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
