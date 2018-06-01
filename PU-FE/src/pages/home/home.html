@@ -18,29 +18,85 @@
         <img src="../../assets/imgs/cardImage.JPG" />
         <ion-card-content>
           <ion-card-title>
-            Ahmed Yehia Kotub
+            <div class="card-name">
+              {{user.userFullName}}
+            </div>
           </ion-card-title>
           <div class="card-id">
-            136471
+            {{user.userID}}
           </div>
           <div class="card-email">
-            ahmedyehiakhater@gmail.com
-          </div>
-          <div class="bottom-card">
-            <ion-row text-center>
-              <ion-col>
-                <p>
-                  Achieved credits
-                </p>
-                <p>
-                  136
-                </p>
-              </ion-col>
-              <ion-col>Registered credits</ion-col>
-              <ion-col>Remaining credits</ion-col>
-            </ion-row>
+            {{user.userEmail}}
           </div>
         </ion-card-content>
+        <div class="middle-card">
+          <ion-row text-center>
+            <ion-col>
+              <div class="middle-card-text">
+                <p>
+                  Achieved Credits
+                </p>
+                <p>
+                  {{user.achievedCredits}}
+                </p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="middle-card-text">
+                <p>
+                  Regist. credits
+                </p>
+                <p>
+                  {{user.registeredCredits}}
+                </p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="middle-card-text">
+                <p>
+                  Remain. credits
+                </p>
+                <p>
+                  {{user.registeredCredits + user.achievedCredits}}
+                </p>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div class="bottom-card">
+          <ion-row text-center>
+            <ion-col>
+              <div class="bottom-card-text">
+                <p>
+                  Cumm. GPA
+                </p>
+                <p>
+                  {{user.cummulativeGpa}}
+                </p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="bottom-card-text">
+                <p>
+                  Semest. GPA
+                </p>
+                <p>
+                  {{user.semesterGpa}}
+                </p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="bottom-card-text">
+                <p>
+                  UK GPA
+                </p>
+                <p>
+                  {{user.ukGpa}}
+                </p>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
       </ion-card>
     </ion-row>
   </ion-grid>

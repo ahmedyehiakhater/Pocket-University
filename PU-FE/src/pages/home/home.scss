@@ -1,4 +1,24 @@
+.card-title{
+    color: $greenTheme;
+    font-weight: bold;
+}
+.middle-card{
+    background-color: #0E0E0E;
+}
+.middle-card-text p{
+    color: $greenTheme;
+    font-weight: bold;
+}
+.middle-card-text p:last-child{
+    color:white;
+}
 .bottom-card{
-    background-color: #524C45;
-    color: yellow;
+    background-color:white;
+}
+.bottom-card-text p{
+    color: $greenTheme;
+    font-weight: bold;
+}
+.bottom-card-text p:last-child{
+    color:black;
 }
