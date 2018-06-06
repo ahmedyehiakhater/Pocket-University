@@ -10,7 +10,6 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
   <ion-grid>
     <ion-row>
@@ -19,14 +18,14 @@
         <ion-card-content>
           <ion-card-title>
             <div class="card-name">
-              {{user.userFullName}}
+              {{user?.userFullName}}
             </div>
           </ion-card-title>
           <div class="card-id">
-            {{user.userID}}
+            {{user?.userID}}
           </div>
           <div class="card-email">
-            {{user.userEmail}}
+            {{user?.userEmail}}
           </div>
         </ion-card-content>
         <div class="middle-card">
@@ -37,7 +36,7 @@
                   Achieved Credits
                 </p>
                 <p>
-                  {{user.achievedCredits}}
+                  {{user?.achievedCredits}}
                 </p>
               </div>
             </ion-col>
@@ -47,7 +46,7 @@
                   Regist. credits
                 </p>
                 <p>
-                  {{user.registeredCredits}}
+                  {{user?.registeredCredits}}
                 </p>
               </div>
             </ion-col>
@@ -57,7 +56,7 @@
                   Remain. credits
                 </p>
                 <p>
-                  {{user.registeredCredits + user.achievedCredits}}
+                  {{user?.registeredCredits + user?.achievedCredits}}
                 </p>
               </div>
             </ion-col>
@@ -71,7 +70,7 @@
                   Cumm. GPA
                 </p>
                 <p>
-                  {{user.cummulativeGpa}}
+                  {{user?.cummulativeGpa}}
                 </p>
               </div>
             </ion-col>
@@ -81,7 +80,7 @@
                   Semest. GPA
                 </p>
                 <p>
-                  {{user.semesterGpa}}
+                  {{user?.semesterGpa}}
                 </p>
               </div>
             </ion-col>
@@ -91,7 +90,7 @@
                   UK GPA
                 </p>
                 <p>
-                  {{user.ukGpa}}
+                  {{user?.ukGpa}}
                 </p>
               </div>
             </ion-col>

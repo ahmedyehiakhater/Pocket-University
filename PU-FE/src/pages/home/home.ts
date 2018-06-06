@@ -1,33 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { UserServiceProvider } from '../../providers/user-service/user-service';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
-  public user: {
-    userFullName: string;
-    userID: number;
-    userEmail: any;
-    achievedCredits: number;
-    registeredCredits: number;
-    cummulativeGpa: number;
-    semesterGpa: number;
-    ukGpa: number;
-  };
-  constructor(public navCtrl: NavController) {
-    this.user = {
-    userFullName : "Ahmed Yehia Khater",
-    userID : 136471,
-    userEmail : "ahmedyehiakhater@gmail.com",
-    achievedCredits : 136,
-    registeredCredits : 18,
-    cummulativeGpa : 2.9,
-    semesterGpa : 2.5,
-    ukGpa : 2.7
-    };
-    console.log(this.user);
+export class HomePage implements OnInit {
+  user;
+  userId = 136471;
+  constructor(public navCtrl: NavController, private userService: UserServiceProvider) {
+  }
+  ngOnInit() {
+    this.getUser();
+  }
+  getUser(): void {
+    this.userService.getUser(this.userId).subscribe(
+      data => {
+        // console.log(data);
+        this.user = data;
+        // this.user = this.user[0];
+        // console.log("First console log" + this.user);
+      },
+      err => console.log("Error log"+err)
+    );
+    // console.log("Second console log" + this.user);
   }
 
 }

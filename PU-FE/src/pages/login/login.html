@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      <div class="title" text-center>
+        Login
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      {{userID}} {{userPassword}}
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>User ID</ion-label>
+            <ion-input type="text" [(ngModel)]="userID"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="userPassword"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col col-3>
+        <button ion-button color="dark" class="title" (click)="signIn()">Sign in</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
